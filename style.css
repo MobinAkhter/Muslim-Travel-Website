@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header,
+section,
+footer {
+    padding: 20px;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+h1,
+p {
+    margin: 0;
+    padding: 0 10px;
+    /* Padding to ensure text doesn't touch the sides on small screens */
+}
+
+#features ul {
+    list-style: none;
+    padding: 0;
+}
+
+#features li {
+    background-color: #e7e7e7;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+#screenshots h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    /* Space below the heading */
+}
+
+#screenshots .screenshots-container {
+    display: flex;
+    flex-direction: column;
+    /* Stack images vertically on small screens */
+    align-items: center;
+    /* Center images vertically */
+    gap: 20px;
+}
+
+#screenshots img {
+    width: auto;
+    /* Allow the image to scale down */
+    max-width: 90%;
+    /* Limit the size on very large screens */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+#support a {
+    display: inline-block;
+    background-color: #ff0;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+footer p,
+footer a {
+    color: #81D4FA;
+    /* Light blue color for readability */
+    text-decoration: none;
+}
+
+/* Responsive adjustments for medium and larger screens */
+@media (min-width: 600px) {
+    #screenshots .screenshots-container {
+        flex-direction: row;
+        /* Allows images to be inline on larger screens */
+        flex-wrap: wrap;
+        /* Allows container to wrap images to the next line */
+        justify-content: center;
+        /* Centers images in the container */
+        gap: 20px;
+    }
+
+    #screenshots img {
+        max-width: 45%;
+        /* Two images per row on medium screens */
+    }
+}
+
+/* Larger screens */
+@media (min-width: 900px) {
+    #screenshots img {
+        max-width: 30%;
+        /* Three images per row on large screens */
+    }
+}
+
+/* Very large screens */
+@media (min-width: 1200px) {
+    #screenshots img {
+        max-width: 22%;
+        /* Four images per row on very large screens */
+    }
+}
+
+/* Very small screens adjustments */
+@media (max-width: 480px) {
+
+    header,
+    section,
+    footer {
+        padding: 10px;
+    }
+
+    #features li,
+    #support a {
+        padding: 5px 10px;
+    }
+
+    #screenshots img {
+        max-width: 100%;
+        /* Full width images on small screens */
+    }
+}
